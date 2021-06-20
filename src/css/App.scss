@@ -6,7 +6,7 @@ $body-font: "Nunito", sans-serif;
 $text-xl: 60px;
 $text-l: 30px;
 $text-m: 24px;
-$text-s: 24px;
+$text-s: 18px;
 $text-xs: 16px;
 
 //General styles
@@ -14,13 +14,40 @@ $text-xs: 16px;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color: #fff;
+}
+
+.heading-text {
+  /* color: #fff; */
+  font-family: $heading-font;
+}
+
+.body-text {
+  /* color: #fff; */
+  font-family: $body-font;
+}
+
+.section {
+  text-align: center;
+}
+
+#root {
+  padding: 0 60px;
+}
+
+//App styles
+.App__heading {
+  text-align: center;
+  font-family: $heading-font;
+  color: #fff;
+  font-size: $text-l;
 }
 
 //Hero styles
 .hero-container {
   text-align: center;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .hero-container__content-wrapper {
@@ -31,15 +58,13 @@ $text-xs: 16px;
 }
 
 .content-wrapper__title {
+  @extend .heading-text;
   font-size: $text-xl;
-  font-family: $heading-font;
-  color: #fff;
 }
 
 .content-wrapper__text {
+  @extend .heading-text;
   font-size: $text-m;
-  font-family: "Space Mono", monospace;
-  color: #fff;
   max-width: 750px;
   margin: 32px auto 0;
 }
@@ -48,7 +73,7 @@ $text-xs: 16px;
   color: #fff;
   font-size: 50px;
   position: absolute;
-  left: 50%;
+  left: 48%;
   bottom: 4vh;
   z-index: 1;
   animation: pulse 2s 3s ease-out infinite;
@@ -83,4 +108,22 @@ $text-xs: 16px;
     opacity: 1;
     transform: none;
   }
+}
+
+//Projects Sections styles
+
+.project-section {
+  text-align: center;
+}
+
+.project-section__heading {
+  @extend .body-text;
+  margin-top: 48px;
+  font-size: $text-m;
+}
+
+.project-section__description {
+  @extend .body-text;
+  margin-top: 24px;
+  font-size: $text-s;
 }

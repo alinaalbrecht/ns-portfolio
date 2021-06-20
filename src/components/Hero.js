@@ -3,7 +3,7 @@ const Hero = (props) => {
   return (
     <div className="hero-container">
       <div className="hero-container__content-wrapper">
-        <div className="content-wrapper__title">Hello,</div>
+        <h1 className="content-wrapper__title">Hello,</h1>
         <div className="content-wrapper__text">
           My name is Nathaniel Smith and I am a Python Engineer based in Berlin.
           I am currently finishing my thesis in computational Chemistry at the
