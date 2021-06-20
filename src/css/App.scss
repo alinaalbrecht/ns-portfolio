@@ -32,7 +32,7 @@ $text-xs: 16px;
 }
 
 #root {
-  padding: 0 60px;
+  padding: 0 60px 100px;
 }
 
 //App styles
@@ -126,4 +126,43 @@ $text-xs: 16px;
   @extend .body-text;
   margin-top: 24px;
   font-size: $text-s;
+}
+
+.project-section__project-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+//Project tile styles
+.project-tile {
+  border-radius: 20px;
+  width: 30%;
+  height: 200px;
+  /* filter: blur(1px); */
+  background-color: rgba($color: #a6c2f6, $alpha: 0.15);
+  border: 3px solid transparent;
+  z-index: 1;
+  text-align: center;
+}
+.project-tile:hover {
+  border: 3px solid #a6c2f6;
+  /* filter: blur(1px); */
+}
+
+.project-tile__name {
+  @extend .heading-text;
+  padding: 20px 20px 0;
+}
+
+.project-tile__description {
+  @extend .body-text;
+  padding: 0 20px 20px;
+}
+
+.project-tile:hover::after {
+  @extend .heading-text;
+  content: "visit repository";
+  color: #a6c2f6;
 }
