@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
+//Variable declarations
+$heading-font: "Space Mono", monospace;
+$body-font: "Nunito", sans-serif;
+$text-xl: 60px;
+$text-l: 30px;
+$text-m: 24px;
+$text-s: 24px;
+$text-xs: 16px;
+
+//General styles
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+//Hero styles
+.hero-container {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.hero-container__content-wrapper {
+  @extend .hero-container;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-wrapper__title {
+  font-size: $text-xl;
+  font-family: $heading-font;
+  color: #fff;
+}
+
+.content-wrapper__text {
+  font-size: $text-m;
+  font-family: "Space Mono", monospace;
+  color: #fff;
+  max-width: 750px;
+  margin: 32px auto 0;
+}
+
+.hero-container__chevron {
+  color: #fff;
+  font-size: 50px;
+  position: absolute;
+  left: 50%;
+  bottom: 4vh;
+  z-index: 1;
+  animation: pulse 2s 3s ease-out infinite;
+}
+
+.hero-container__chevron svg {
+  animation: fade-slide-up 1s 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
