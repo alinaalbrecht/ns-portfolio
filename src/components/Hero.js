@@ -1,5 +1,5 @@
 import { FaChevronDown } from "react-icons/fa";
-const Hero = (props) => {
+const Hero = () => {
   return (
     <div className="hero-container">
       <div className="hero-container__content-wrapper">

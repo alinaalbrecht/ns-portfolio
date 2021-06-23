@@ -1,18 +1,58 @@
 import Project from "./Project";
+import Slider from "react-slick";
 
-const ProjectSection = (props) => {
-  return (
-    <div className="project-section">
-      <h3 className="project-section__heading">{props.heading}</h3>
-      <p className="project-section__description">{props.description}</p>
-      <div className="project-section__project-grid">
+var React = require("react");
+/* var Slider = require("react-slick"); */
+
+class ProjectSection extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const projects = this.props.projects.map((project) => {
+      return (
         <Project
-          name="Twitter CSV Parser"
-          description="Converts the exported .csv data from twitter into an excel file, as the Tweet text included in the file breaks the format from a standard .csv file with newline breaks."
+          name={project.name}
+          description={project.description}
+          url={project.url}
         />
+      );
+    });
+
+    const settings = {
+      dots: true,
+      infinite: false,
+      autoplay: false,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      swipeToSlide: true,
+      responsive: [
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
+
+    return (
+      <div className="project-section">
+        <h3 className="project-section__heading">{this.props.heading}</h3>
+        <p className="project-section__description">{this.props.description}</p>
+        <Slider {...settings}>{projects}</Slider>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default ProjectSection;

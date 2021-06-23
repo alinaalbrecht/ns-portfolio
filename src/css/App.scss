@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 //Variable declarations
 $heading-font: "Space Mono", monospace;
@@ -8,6 +10,12 @@ $text-l: 30px;
 $text-m: 24px;
 $text-s: 18px;
 $text-xs: 16px;
+$light-blue: #99ffff;
+$emphasis-color: #07ffff;
+$overlay: rgba(
+  $color: #a6c2f6,
+  $alpha: 0.15,
+);
 
 //General styles
 * {
@@ -15,20 +23,34 @@ $text-xs: 16px;
   padding: 0;
   margin: 0;
   color: #fff;
+  font-family: $body-font;
+  text-align: center;
 }
 
 .heading-text {
-  /* color: #fff; */
   font-family: $heading-font;
 }
 
 .body-text {
-  /* color: #fff; */
   font-family: $body-font;
 }
 
 .section {
   text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+a {
+  text-decoration: none;
 }
 
 #root {
@@ -41,6 +63,7 @@ $text-xs: 16px;
   font-family: $heading-font;
   color: #fff;
   font-size: $text-l;
+  margin-top: 65px;
 }
 
 //Hero styles
@@ -113,7 +136,7 @@ $text-xs: 16px;
 //Projects Sections styles
 
 .project-section {
-  text-align: center;
+  @extend .section;
 }
 
 .project-section__heading {
@@ -129,40 +152,141 @@ $text-xs: 16px;
 }
 
 .project-section__project-grid {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  @extend .grid;
+}
+
+//slick slider styles
+
+.slick-slide {
+  min-height: 0;
+  min-width: 0;
   margin-top: 32px;
+}
+
+.slick-dots li button::before,
+.slick-dots li.slick-active button::before {
+  color: #fff;
+  font-size: 12px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-size: $text-l;
 }
 
 //Project tile styles
 .project-tile {
+  //flex styles
+  /*   
   border-radius: 20px;
   width: 30%;
-  height: 200px;
-  /* filter: blur(1px); */
+  align-self: stretch;
+  flex-grow: 0;
+  flex-shrink: 0;
   background-color: rgba($color: #a6c2f6, $alpha: 0.15);
   border: 3px solid transparent;
   z-index: 1;
   text-align: center;
+  transition: border 0.3s ease-in;
+  height: 200px; */
+
+  // slider styles
+  text-align: center;
+  transition: border 0.3s ease-in;
+  background-color: $overlay;
+  border: 3px solid transparent;
+  border-radius: 20px;
+  display: inline-block;
+  min-height: 220px;
+  width: 90%;
+  padding: 20px;
 }
+
+.project-tile--slider {
+  // slider styles
+  text-align: center;
+  transition: border 0.3s ease-in;
+  background-color: rgba(166, 194, 246, 0.15);
+  border: 3px solid transparent;
+  border-radius: 20px;
+  margin-left: 24px;
+  display: inline-block;
+  height: 200px;
+}
+
 .project-tile:hover {
-  border: 3px solid #a6c2f6;
-  /* filter: blur(1px); */
+  border: 3px double $light-blue;
+  position: relative;
 }
 
 .project-tile__name {
   @extend .heading-text;
-  padding: 20px 20px 0;
+  color: $emphasis-color;
+  font-size: $text-s;
+  margin-bottom: 12px;
 }
 
-.project-tile__description {
+/* .project-tile__description {
   @extend .body-text;
-  padding: 0 20px 20px;
-}
+} */
 
 .project-tile:hover::after {
   @extend .heading-text;
   content: "visit repository";
-  color: #a6c2f6;
+  color: $light-blue;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+
+.project-tile:hover::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba($color: #000, $alpha: 0.7);
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.tools-section {
+  font-size: 24px;
+  margin-top: 65px;
+}
+
+.tools-section__logo-grid {
+  @extend .grid;
+}
+
+.logo-grid__logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-grid__logo img {
+  width: 100%;
+}
+
+.footer {
+  background-color: $overlay;
+  margin: 65px -60px 0;
+  position: absolute;
+  display: flex;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  padding: 48px 0;
+  font-size: $text-m;
+  justify-content: center;
+  gap: 24px;
+  align-items: center;
+}
+
+.footer svg {
+  font-size: $text-l;
 }
