@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/ns-portfolio/static/css/main.6b0c5e6d.chunk.css",
+    "main.js": "/ns-portfolio/static/js/main.f2f96e63.chunk.js",
+    "main.js.map": "/ns-portfolio/static/js/main.f2f96e63.chunk.js.map",
+    "runtime-main.js": "/ns-portfolio/static/js/runtime-main.55671409.js",
+    "runtime-main.js.map": "/ns-portfolio/static/js/runtime-main.55671409.js.map",
+    "static/css/2.7009dc18.chunk.css": "/ns-portfolio/static/css/2.7009dc18.chunk.css",
+    "static/js/2.41e7f251.chunk.js": "/ns-portfolio/static/js/2.41e7f251.chunk.js",
+    "static/js/2.41e7f251.chunk.js.map": "/ns-portfolio/static/js/2.41e7f251.chunk.js.map",
+    "index.html": "/ns-portfolio/index.html",
+    "static/css/2.7009dc18.chunk.css.map": "/ns-portfolio/static/css/2.7009dc18.chunk.css.map",
+    "static/css/main.6b0c5e6d.chunk.css.map": "/ns-portfolio/static/css/main.6b0c5e6d.chunk.css.map",
+    "static/js/2.41e7f251.chunk.js.LICENSE.txt": "/ns-portfolio/static/js/2.41e7f251.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/ns-portfolio/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.55671409.js",
+    "static/css/2.7009dc18.chunk.css",
+    "static/js/2.41e7f251.chunk.js",
+    "static/css/main.6b0c5e6d.chunk.css",
+    "static/js/main.f2f96e63.chunk.js"
+  ]
+}
