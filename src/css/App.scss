@@ -331,28 +331,44 @@ a {
   #root {
     padding: 0 20px 100px;
   }
-  * {
+  .content-wrapper__title,
+  .content-wrapper__text,
+  .App__heading,
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
     text-align: left;
   }
   .slick-arrow {
     display: none !important;
   }
 
-  .App__heading {
+  /* .App__heading {
     text-align: center;
-  }
+  } */
   .tools-section__logo-grid {
-    flex-wrap: nowrap;
+    /*  flex-wrap: nowrap; */
     justify-content: flex-start;
-    overflow-y: scroll;
+    /*   overflow-y: scroll; */
   }
 
   .logo-grid__logo {
-    flex-shrink: 0;
+    width: 30%;
+    height: auto;
   }
-
+  /* 
   .slick-slider {
     position: relative;
     left: 5%;
+  } */
+
+  /*  .logo-grid__logo {
+    width: 30%;
   }
+
+  .logo-grid__logo img {
+    width: 100%;
+  } */
 }
