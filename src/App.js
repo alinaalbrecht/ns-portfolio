@@ -51,17 +51,17 @@ const chemistryProjects = [
 ];
 
 const languageTools = [
-  "/images/python.svg",
-  "/images/latex.svg",
-  "/images/bash.svg",
-  "/images/visual-basic.svg",
+  "images/python.svg",
+  "images/latex.svg",
+  "images/bash.svg",
+  "images/visual-basic.svg",
 ];
 
 const pythonTools = [
-  "/images/jupyter.svg",
-  "/images/numpy.svg",
-  "/images/postgresql.svg",
-  "/images/scipy.svg",
+  "images/jupyter.svg",
+  "images/numpy.svg",
+  "images/postgresql.svg",
+  "images/scipy.svg",
 ];
 
 function App() {
