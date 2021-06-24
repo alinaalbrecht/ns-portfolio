@@ -337,7 +337,7 @@ a {
   h1,
   h2,
   h3,
-  h4,
+  /* h4, */
   p {
     text-align: left;
   }
@@ -345,19 +345,24 @@ a {
     display: none !important;
   }
 
+  .project-tile__description {
+    text-align: center;
+  }
+
   /* .App__heading {
     text-align: center;
   } */
   .tools-section__logo-grid {
-    /*  flex-wrap: nowrap; */
+    flex-wrap: nowrap;
     justify-content: flex-start;
     /*   overflow-y: scroll; */
   }
 
-  .logo-grid__logo {
+  /*  .logo-grid__logo {
     width: 30%;
     height: auto;
-  }
+  } */
+
   /* 
   .slick-slider {
     position: relative;
