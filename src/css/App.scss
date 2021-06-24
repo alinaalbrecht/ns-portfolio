@@ -223,9 +223,9 @@ a {
   position: relative;
 } */
 
-*:focus {
+/* *:focus {
   border: 3px double $light-blue;
-}
+} */
 
 .project-tile__name {
   @extend .heading-text;
@@ -357,6 +357,18 @@ a {
     width: 100%;
     padding: 12px;
     min-height: 200px;
+  }
+
+  .project-tile::after {
+    content: "view repository";
+    color: $light-blue;
+    font-family: $heading-font;
+    line-height: 3;
+    text-decoration: underline;
+  }
+
+  .project-tile:active {
+    border: 3px double $light-blue;
   }
 
   .project-tile__description {
