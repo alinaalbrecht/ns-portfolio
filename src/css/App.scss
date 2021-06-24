@@ -223,6 +223,10 @@ a {
   position: relative;
 } */
 
+*:focus {
+  border: 3px double $light-blue;
+}
+
 .project-tile__name {
   @extend .heading-text;
   color: $emphasis-color;
@@ -343,6 +347,12 @@ a {
   }
   .slick-arrow {
     display: none !important;
+  }
+
+  .project-tile {
+    width: 100%;
+    padding: 12px;
+    min-height: 200px;
   }
 
   .project-tile__description {
