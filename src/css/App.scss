@@ -332,6 +332,9 @@ a {
 }
 
 @media (max-width: 640px) {
+  html {
+    overflow-x: hidden;
+  }
   #root {
     padding: 0 20px 100px;
     overflow-x: hidden;
