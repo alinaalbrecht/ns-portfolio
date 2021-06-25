@@ -1,9 +1,5 @@
 import Background from "./components/Background";
 import Hero from "./components/Hero";
-/* import ProjectSection from */
-/* import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; */
-/* import { faChevronDown } from "@fortawesome/free-solid-svg-icons"; */
-import { FaGithub } from "react-icons/fa";
 import "./css/App.scss";
 import ProjectSection from "./components/ProjectSection";
 import ToolsSection from "./components/ToolsSection";
@@ -74,18 +70,18 @@ function App() {
       <h2 className="App__heading"># Projects I’ve Worked On</h2>
       <ProjectSection
         heading="Work Projects"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        description="The below projects are a collection of scripts that I wrote as part of my position as a working student. Generally these projects are optimisations to improve workflow where desired, instead of performing a task manually."
         projects={workProjects}
       />
       <ProjectSection
         heading="Chemistry Projects"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        description="These projects are scripts I wrote as part of my MSc in Chemistry at the Freie Universität. Scripts are improvements to streamline the creation of files for a QM/MM calculation using a GROMACS grofile obtained from a .pdb file, or mathematical calculations of some kind."
         projects={chemistryProjects}
       />
       <h2 className="App__heading"># Tools</h2>
       <ToolsSection heading="Languages" tools={languageTools} />
       <ToolsSection heading="Python Tools" tools={pythonTools} />
-      <Footer icon={FaGithub} />
+      <Footer />
     </div>
   );
 }

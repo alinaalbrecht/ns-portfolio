@@ -7,7 +7,8 @@ const Hero = () => {
         <div className="content-wrapper__text">
           My name is Nathaniel Smith and I am a Python Engineer based in Berlin.
           I am currently finishing my thesis in computational Chemistry at the
-          Freie Universität and working as a student assistant at EU Openscreen.
+          Freie Universität and working as a student lab and admin assistant at
+          EU Openscreen.
         </div>
       </div>
       <div className="hero-container__chevron">
